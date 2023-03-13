@@ -1,0 +1,14 @@
+<div class="card">
+<label>Tabs</label> 
+<p-tabView>
+    <p-tabPanel [headerStyle]='{"width": "250px", "color":"red", "border-top": "1px solid black", "border-bottom": "1px solid black", "border-right": "1px solid black", "border-left": "1px solid black"}' header="Random Quote">
+        <random-quotable></random-quotable>
+    </p-tabPanel>
+    <p-tabPanel [headerStyle]='{"width": "250px", "color":"blue", "border-top": "1px solid black", "border-bottom": "1px solid black", "border-right": "1px solid black", "border-left": "1px solid black"}' header="Author Quotes">
+        <author-quotable></author-quotable>
+    </p-tabPanel>
+    <p-tabPanel [headerStyle]='{"width": "250px", "color":"green", "border-top": "1px solid black", "border-bottom": "1px solid black", "border-right": "1px solid black", "border-left": "1px solid black"}' header="Shippers">
+       <shippers-list></shippers-list>
+    </p-tabPanel>
+</p-tabView>
+</div>

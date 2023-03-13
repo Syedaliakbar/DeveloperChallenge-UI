@@ -1,0 +1,36 @@
+<p-table [value]="shippers" >
+    <ng-template pTemplate="header">
+        <tr>
+            <th>Shipper Name</th>
+        </tr>
+    </ng-template>
+    <ng-template pTemplate="body" let-shipper>
+        <tr>
+            <td (click)="getShippmentById(shipper.shipperId)">{{shipper.shipperName}}</td>
+        </tr>
+    </ng-template>
+</p-table>
+<div style="margin-top: 20px;">
+    <label style="color:red;"> Shippemts </label>
+    <p-table styleClass="override-this" [tableStyle]="{'min-width': '50rem'}"  [value]="shipments" >
+        <ng-template pTemplate="header">
+            <tr>
+                <th>Id</th>
+                <th>Shipper Name</th>
+                <th>Carrier Name</th>
+                <th>Weight</th>
+                <th>Rate Description</th>
+            </tr>
+        </ng-template>
+        <ng-template pTemplate="body" let-shipment>
+            <tr>
+                <td class="center-text">{{shipment.shipmentId}}</td>
+                <td class="center-text">{{shipment.shipper.shipperName}}</td>
+                <td class="center-text">{{shipment.carrier.carrierName}}</td>
+                <td class="center-text">{{shipment.shipmentWeight}}</td>
+                <td class="center-text">{{shipment.shipmentRate.shipmentRateDescription}}</td>
+            </tr>
+        </ng-template>
+    </p-table>
+</div>
+

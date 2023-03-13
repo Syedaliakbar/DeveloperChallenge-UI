@@ -1,0 +1,23 @@
+<p-table [value]="quotes" sortMode="single"  rowGroupMode="subheader" groupRowsBy="groupName" >
+    <ng-template pTemplate="header">
+        <tr>
+            <th>Quote</th>
+            <th>Author</th>
+            <th>Length</th>
+        </tr>
+    </ng-template>
+    <ng-template pTemplate="groupheader" let-quote>
+        <tr pRowGroupHeader>
+            <td colspan="5">
+                <span class="font-bold ml-2" style="color:red">GroupName : {{quote.groupName}}</span>
+            </td>
+        </tr>
+    </ng-template>
+    <ng-template pTemplate="body" let-quote>
+        <tr>
+            <td>{{quote.content}}</td>
+            <td>{{quote.author}}</td>
+            <td>{{quote.length}}</td>
+        </tr>
+    </ng-template>
+</p-table>

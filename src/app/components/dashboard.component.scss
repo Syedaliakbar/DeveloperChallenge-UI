@@ -1,0 +1,30 @@
+.tabview-custom {
+    i, span {
+        vertical-align: middle;
+    }
+
+    span {
+        margin: 0 .5rem;
+    }
+}
+
+.p-button {
+    margin-right: .25rem;
+}
+
+.p-tabview p {
+    line-height: 1.5;
+    margin: 0;
+}
+
+// .p-highlight{
+//     padding: 5px !important;
+//     margin: 2px;
+//     border-top: 1px solid black;
+//     border-bottom: 1px solid black;
+//     border-left: 1px solid black;
+//     border-right: 1px solid black;
+// }
+ul.ui-tabview-nav li:first-child span {
+    color: red;
+  }
